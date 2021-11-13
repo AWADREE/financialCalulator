@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <dev class="mainContainer">
+      <h2>Calculate Your Rewards</h2>
+      <dev class="formContainer">
+        <dev class="labelContainer">
+          <label>Vendor/Bills</label>
+          <label>Meida/ad Spend</label>
+          <label>Corp.Spend</label>
+          <label>Team Project</label>
+        </dev>
+        <dev class="inputContainer">
+          <input
+            id="bills"
+            type="number"
+            placeholder="Enter a number"
+            onchange="calculateSum()"
+          />
+          <input
+            id="media"
+            type="number"
+            placeholder="Enter a number"
+            onchange="calculateSum()"
+          />
+          <input
+            id="corp"
+            type="number"
+            placeholder="Enter a number"
+            onchange="calculateSum()"
+          />
+          <input
+            id="team"
+            type="number"
+            placeholder="Enter a number"
+            onchange="calculateSum()"
+          />
+        </dev>
+      </dev>
+      <h2>Compare Your Rewards</h2>
+      <dev class="compareContainer">
+        <button onclick="brexClickHandler()">Brex</button>
+        <button onclick="stripeClickHandler()">Stripe</button>
+        <button onclick="amexClickHandler()">Amex</button>
+      </dev>
+      <dev class="cardContainer">
+        <dev class="businessCardAndItsValue">
+          <label id="businessCard"></label>
+          <dev id="businessSlider"> </dev>
+          <h3 class="cardBrandValue" id="cardBrand"></h3>
+        </dev>
+        <dev class="ortherCardAndValues">
+          <dev class="cardAndLabels">
+            <img src="Card.png" alt="Card" width="200" height="100" />
+            <dev class="cardLabels">
+              <label>Unlimited Rewards</label>
+              <label>LIFETIME REWARDS</label>
+            </dev>
+          </dev>
+          <dev class="sliders">
+            <dev id="unlimitedRewardsSlider"> </dev>
+            <dev id="lifeTimeRewardsSlider"> </dev>
+          </dev>
+          <dev class="cardValue">
+            <h3 id="lifeTimeRewards"></h3>
+            <h3 id="unlimitedRewards"></h3>
+          </dev>
+        </dev>
+      </dev>
+    </dev>
+  </body>
+</html>
